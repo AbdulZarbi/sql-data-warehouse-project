@@ -10,4 +10,11 @@ Develop a mdodren data warehousing using MYSQL to consolidate sales data, enabli
 
 ### Specification 
 - **Data Source**: Inmoort data from two source systems (ERP and CRM) provided as CSV files
-- **Data Quality**:  
+- **Data Quality**: Cleans and resolve data quality issues prior to analysis.
+- **Integration**: Combine both sources in a single, user-friednly data model designed for analytical queries.
+- **Scope**: Focus on the latest dataset only; historirzation of data is not required.
+- **Documentation**: Provide clear documnetation of the data model to support both business stakeholders and analytics team.
+
+----
+
+
