@@ -24,54 +24,55 @@ CREATE TABLE silver_crm_cust_info (
 -- CRM: Product Information
 DROP TABLE IF EXISTS silver_crm_prd_info;
 CREATE TABLE silver_crm_prd_info (
-    prd_id       INT,
-    prd_key      VARCHAR(50),
-    prd_nm       VARCHAR(50),
-    prd_cost     INT,
-    prd_line     VARCHAR(50),
-    prd_start_dt DATETIME,
-    prd_end_dt   DATETIME,
+    prd_id          INT,
+    cat_id          VARCHAR(50),
+    prd_key         VARCHAR(50),
+    prd_nm          VARCHAR(50),
+    prd_cost        INT,
+    prd_line        VARCHAR(50),
+    prd_start_dt    DATE,
+    prd_end_dt      DATE,
     dwh_create_date DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 -- CRM: Sales Details
 DROP TABLE IF EXISTS silver_crm_sales_details;
 CREATE TABLE silver_crm_sales_details (
-    sls_ord_num  VARCHAR(50),
-    sls_prd_key  VARCHAR(50),
-    sls_cust_id  INT,
-    sls_order_dt INT,
-    sls_ship_dt  INT,
-    sls_due_dt   INT,
-    sls_sales    INT,
-    sls_quantity INT,
-    sls_price    INT,
+    sls_ord_num     VARCHAR(50),
+    sls_prd_key     VARCHAR(50),
+    sls_cust_id     INT,
+    sls_order_dt    INT,
+    sls_ship_dt     INT,
+    sls_due_dt      INT,
+    sls_sales       INT,
+    sls_quantity    INT,
+    sls_price       INT,
     dwh_create_date DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 -- ERP: Customer Demographics
 DROP TABLE IF EXISTS silver_erp_cust_az12;
 CREATE TABLE silver_erp_cust_az12 (
-    id    VARCHAR(50),
-    bdate DATE,
-    gen   VARCHAR(50),
+    id              VARCHAR(50),
+    bdate           DATE,
+    gen             VARCHAR(50),
     dwh_create_date DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 -- ERP: Customer Location
 DROP TABLE IF EXISTS silver_erp_cust_a101;
 CREATE TABLE silver_erp_cust_a101 (
-    cid   VARCHAR(50),
-    cntry VARCHAR(50),
+    cid             VARCHAR(50),
+    cntry           VARCHAR(50),
     dwh_create_date DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 -- ERP: Product Category
 DROP TABLE IF EXISTS silver_erp_px_cat_g1v2;
 CREATE TABLE silver_erp_px_cat_g1v2 (
-    id          VARCHAR(50),
-    cat         VARCHAR(50),
-    subcat      VARCHAR(50),
-    maintenance VARCHAR(50),
+    id              VARCHAR(50),
+    cat             VARCHAR(50),
+    subcat          VARCHAR(50),
+    maintenance     VARCHAR(50),
     dwh_create_date DATETIME DEFAULT CURRENT_TIMESTAMP
 );
